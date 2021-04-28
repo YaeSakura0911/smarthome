@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_notification_filter"
+        android:icon="@drawable/ic_menu_notifications_filter"
+        android:title="筛选消息"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_notification_clear"
+        android:icon="@drawable/ic_menu_notifications_clear"
+        android:title="清空消息"
+        app:showAsAction="always" />
+</menu>

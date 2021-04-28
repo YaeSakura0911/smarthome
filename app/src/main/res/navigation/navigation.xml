@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="com.example.demo3.fragment.RoomFragment"
+        android:label="房间"
+        tools:layout="@layout/fragment_room" >
+        <action
+            android:id="@+id/action_to_roomDetail"
+            app:destination="@id/roomDetailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_to_roomAdd"
+            app:destination="@id/roomAddFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/roomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.demo3.fragment.HomeFragment"
+        android:label="主页"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_to_notification"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_to_product"
+            app:destination="@id/productFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_to_deviceDetail"
+            app:destination="@id/deviceDetailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.demo3.fragment.UserFragment"
+        android:label="我的"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/roomDetailFragment"
+        android:name="com.example.demo3.fragment.RoomDetailFragment"
+        tools:layout="@layout/fragment_room_detail">
+        <action
+            android:id="@+id/action_to_roomEdit"
+            app:destination="@id/roomEditFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/roomDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomAddFragment"
+        android:name="com.example.demo3.fragment.RoomAddFragment"
+        android:label="新建房间"
+        tools:layout="@layout/fragment_room_add" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.demo3.fragment.NotificationFragment"
+        android:label="系统消息"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.demo3.fragment.ProductFragment"
+        android:label="选择产品"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_to_deviceAdd"
+            app:destination="@id/deviceAddFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.example.demo3.fragment.DeviceDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_device_detail" />
+    <fragment
+        android:id="@+id/deviceAddFragment"
+        android:name="com.example.demo3.fragment.DeviceAddFragment"
+        android:label="添加设备"
+        tools:layout="@layout/fragment_device_add" >
+        <action
+            android:id="@+id/action_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomEditFragment"
+        android:name="com.example.demo3.fragment.RoomEditFragment"
+        android:label="编辑房间"
+        tools:layout="@layout/fragment_room_edit" />
+</navigation>
